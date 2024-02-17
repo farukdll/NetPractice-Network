@@ -40,8 +40,8 @@
   * ###### Here is a sample TCP/IP Protocol Diagram
   <h1 align="center">
   <p>
-      <img height="300" width="500" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/733c2f9c-4bdd-4bdc-b814-fd74a5fb22be">
-      <img height="300" width="400" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/13b44816-49cb-4daf-9441-8b9b3a89897a">
+      <img height="280" width="450" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/733c2f9c-4bdd-4bdc-b814-fd74a5fb22be">
+      <img height="280" width="350" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/13b44816-49cb-4daf-9441-8b9b3a89897a">
   </h1> <p> </p>
 
 
@@ -55,8 +55,8 @@
     * ###### Connection Management: TCP establishes a connection before communication starts and closes the connection when communication ends. This ensures that data transmission takes place in a successful and orderly manner.
   <h1 align="center">
   <p>
-      <img height="300" width="400" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/a6dc9757-fc20-4afa-b294-cfd09c947478">
-      <img height="300" width="450" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/df2eac38-a7eb-4c19-8cee-5eefd57b9db8">
+      <img height="280" width="350" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/a6dc9757-fc20-4afa-b294-cfd09c947478">
+      <img height="280" width="450" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/df2eac38-a7eb-4c19-8cee-5eefd57b9db8">
   </h1> <p> </p>
 
 
@@ -71,9 +71,9 @@
   * ###### Protocol Management: Provides management of upper layer protocols such as IP, TCP and UDP. This determines which upper layer protocol data packets use and carries information about these protocols with the data packets.
   <h1 align="center">
   <p>
-      <img height="300" width="400" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/947bc78c-0951-4ea2-9d97-961c6f775fe2">
-      <img height="300" width="450" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/df2eac38-a7eb-4c19-8cee-5eefd57b9db8">
-      <img height="180" width="850" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/87f5a6a6-bba1-42d3-a51e-fcbd450e0acf">
+      <img height="280" width="350" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/947bc78c-0951-4ea2-9d97-961c6f775fe2">
+      <img height="280" width="450" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/df2eac38-a7eb-4c19-8cee-5eefd57b9db8">
+      <img height="180" width="800" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/87f5a6a6-bba1-42d3-a51e-fcbd450e0acf">
   </h1> <p> </p>
   
 #### Binary number system calculation for IP addresses <a name="bnscfipaddss"></a>
