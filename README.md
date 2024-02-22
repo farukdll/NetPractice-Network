@@ -40,8 +40,8 @@
   * ###### Here is a sample TCP/IP Protocol Diagram
   <h1 align="center">
   <p>
-      <img height="280" width="450" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/733c2f9c-4bdd-4bdc-b814-fd74a5fb22be">
-      <img height="280" width="350" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/13b44816-49cb-4daf-9441-8b9b3a89897a">
+      <img height="280" width="430" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/733c2f9c-4bdd-4bdc-b814-fd74a5fb22be">
+      <img height="280" width="330" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/13b44816-49cb-4daf-9441-8b9b3a89897a">
   </h1> <p> </p>
 
 
@@ -55,8 +55,8 @@
     * ###### Connection Management: TCP establishes a connection before communication starts and closes the connection when communication ends. This ensures that data transmission takes place in a successful and orderly manner.
   <h1 align="center">
   <p>
-      <img height="280" width="350" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/a6dc9757-fc20-4afa-b294-cfd09c947478">
-      <img height="280" width="450" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/df2eac38-a7eb-4c19-8cee-5eefd57b9db8">
+      <img height="280" width="330" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/a6dc9757-fc20-4afa-b294-cfd09c947478">
+      <img height="280" width="430" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/df2eac38-a7eb-4c19-8cee-5eefd57b9db8">
   </h1> <p> </p>
 
 
@@ -71,9 +71,9 @@
   * ###### Protocol Management: Provides management of upper layer protocols such as IP, TCP and UDP. This determines which upper layer protocol data packets use and carries information about these protocols with the data packets.
   <h1 align="center">
   <p>
-      <img height="280" width="350" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/947bc78c-0951-4ea2-9d97-961c6f775fe2">
-      <img height="280" width="450" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/df2eac38-a7eb-4c19-8cee-5eefd57b9db8">
-      <img height="180" width="800" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/87f5a6a6-bba1-42d3-a51e-fcbd450e0acf">
+      <img height="280" width="330" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/947bc78c-0951-4ea2-9d97-961c6f775fe2">
+      <img height="280" width="430" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/df2eac38-a7eb-4c19-8cee-5eefd57b9db8">
+      <img height="180" width="760" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/87f5a6a6-bba1-42d3-a51e-fcbd450e0acf">
   </h1> <p> </p>
   
 #### Binary number system calculation for IP addresses <a name="bnscfipaddss"></a>
@@ -170,34 +170,11 @@
 
 #### What is subnet mask ? <a name="wisubmaskkk"></a>
   * ###### A subnet mask is a construct used by network routers that separates the network and host portions of an IP address, dividing the IP address into subnets. While it allows IP addresses to be divided into subnets, it also determines which IP addresses are within the same network when routing network traffic and providing communication. For example, the subnet mask "255.255.255.255.0" specifies the network portion of the first three octets (24 bits) of the IP address and the host portion of the last octet (8 bits). This allows IP addresses to communicate by identifying which network they are on and makes large networks easier to manage.
-  |Subnet Mask 	  | CIDR |	Binary Notation                    | 	Available Addresses|
-  | -             |  -   |   -                                 |   -                 | 
-  |255.255.255.255| 	/32| 	11111111.11111111.11111111.11111111|                  	1|
-  |255.255.255.254| 	/31| 	11111111.11111111.11111111.11111110| 	                  2|
-  |255.255.255.252| 	/30| 	11111111.11111111.11111111.11111100| 	                  4|
-  |255.255.255.248| 	/29| 	11111111.11111111.11111111.11111000| 	                  8|
-  |255.255.255.240| 	/28| 	11111111.11111111.11111111.11110000| 	                 16|
-  |255.255.255.224| 	/27| 	11111111.11111111.11111111.11100000| 	                 32|
-  |255.255.255.192| 	/26| 	11111111.11111111.11111111.11000000| 	                 64|
-  |255.255.255.128| 	/25|  11111111.11111111.11111111.10000000| 	                128|
-  |255.255.255.0  | 	/24| 	11111111.11111111.11111111.00000000| 	                256|		
-  |255.255.254.0  | 	/23| 	11111111.11111111.11111110.00000000| 	                512|
-  |255.255.252.0  | 	/22| 	11111111.11111111.11111100.00000000| 	               1024|
-  |255.255.248.0  | 	/21| 	11111111.11111111.11111000.00000000| 	               2048|
-  |255.255.240.0  | 	/20| 	11111111.11111111.11110000.00000000| 	               4096|
-  |255.255.224.0  | 	/19| 	11111111.11111111.11100000.00000000| 	               8192|
-  |255.255.192.0  | 	/18| 	11111111.11111111.11000000.00000000| 	              16384|
-  |255.255.128.0  | 	/17| 	11111111.11111111.10000000.00000000| 	              32768|
-  |255.255.0.0    | 	/16| 	11111111.11111111.00000000.00000000| 	              65536|	
-  |255.254.0.0    | 	/15| 	11111111.11111110.00000000.00000000| 	             131072|
-  |255.252.0.0    | 	/14| 	11111111.11111100.00000000.00000000| 	             262144|
-  |255.248.0.0    | 	/13| 	11111111.11111000.00000000.00000000| 	             524288|
-  |255.240.0.0    | 	/12| 	11111111.11110000.00000000.00000000| 	            1048576|
-  |255.224.0.0    | 	/11| 	11111111.11100000.00000000.00000000| 	            2097152|
-  |255.192.0.0    | 	/10| 	11111111.11000000.00000000.00000000| 	            4194304|
-  |255.128.0.0    |  	/9 | 	11111111.10000000.00000000.00000000| 	            8388608|
-  |255.0.0.0      |   /8| 	11111111.00000000.00000000.00000000| 	           16777216| 
-
+  <h1 align="center">
+  <p>
+      <img height="400" width="600" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/d9278719-16d4-4b88-835a-5b827b557b56">
+      <img height="400" width="600" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/826d616e-693f-4d5b-8daa-0675b7c9478e">
+  </h1> <p> </p>
 
 
 #### What is a switch ? <a name="wiasch"></a>
@@ -241,7 +218,7 @@
     * ###### It routes incoming packets according to the destination IP address, and this routing process is usually more complex because it communicates between different networks.
   <h1 align="center">
   <p>
-      <img height="400" width="500" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/925598ec-420c-403d-b017-e709df7c4453">
+      <img height="400" width="600" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/925598ec-420c-403d-b017-e709df7c4453">
   </h1> <p> </p>
 
 #### What is a diversion table ? <a name="wiadttle"></a>
