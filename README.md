@@ -25,9 +25,10 @@
   * [What are Network ID and Host ID ?](#wanidahid)
   * [What are Private and Public IP addresses ?](#wapapipaddd)
   * [What are Network address and Broadcast address ?](#warnaabtadd)
+  * [What is subnet mask ?](#wisubmaskkk)
   * [What is a switch ?](#wiasch)
   * [What is a router ?](#wiarer)
-  * [How do switch and router work and what is the difference between them ?](#hasarwwitdbt)
+  * [What is the difference between a switch and a router?](#hasarwwitdbt)
   * [What is a diversion table ?](#wiadttle)
   * [Questions and Solutions](#quesaslti)
 
@@ -163,23 +164,97 @@
   * ###### For example :
     * ###### In a network with a subnet mask of 255.255.255.255.240, IP addresses are divided into 4-bit fields. This means that we can get 2^4, or 16 different values. However, since two addresses are reserved for the network address and the broadcast address, only 14 of these 16 addresses can be used.
     * ###### If a network address is 192.168.1.0 and the subnet mask is 255.255.255.255.240, the available IP addresses on this network are 192.168.1.1 through 192.168.1.14. 192.168.1.0 represents the network address, while 192.168.1.15 represents the broadcast address.
-    * ###### Why can't we use the network address and broadcast address? Because these addresses are usually excluded from assignable IP addresses. Sending data to these addresses can unnecessarily increase network traffic and interfere with the normal communication of devices on the network. Therefore, network and broadcast addresses are usually excluded from assignable IP addresses and are not used for normal communication. Instead, these addresses are used by network routers and other network devices for internal network communication and routing.
-    * ###### In simpler terms, the main reason for excluding network and broadcast addresses from assignable IP addresses is that these addresses are used  to route network traffic and facilitate internal network communication, rather than being directly used for communication between devices. For instance, a network address indicates that devices are connected to the network and is used by network devices like routers to route internal network traffic. The broadcast address, on the other hand, is used to send data to all devices on the network simultaneously but is typically not assigned to devices as a usable IP address. Utilizing these addresses differently from assignable IP addresses helps in organizing communication within the network and efficiently managing network traffic. Therefore, the primary reason these addresses are not used for direct communication is because they are reserved for routing operations by network routers and other network devices.
+  * ###### Why can't we use the network address and broadcast address? Because these addresses are usually excluded from assignable IP addresses. Sending data to these addresses can unnecessarily increase network traffic and interfere with the normal communication of devices on the network. Therefore, network and broadcast addresses are usually excluded from assignable IP addresses and are not used for normal communication. Instead, these addresses are used by network routers and other network devices for internal network communication and routing.
+  * ###### In simpler terms, the main reason for excluding network and broadcast addresses from assignable IP addresses is that these addresses are used  to route network traffic and facilitate internal network communication, rather than being directly used for communication between devices. For instance, a network address indicates that devices are connected to the network and is used by network devices like routers to route internal network traffic. The broadcast address, on the other hand, is used to send data to all devices on the network simultaneously but is typically not assigned to devices as a usable IP address. Utilizing these addresses differently from assignable IP addresses helps in organizing communication within the network and efficiently managing network traffic. Therefore, the primary reason these addresses are not used for direct communication is because they are reserved for routing operations by network routers and other network devices.
+
+
+#### What is subnet mask ? <a name="wisubmaskkk"></a>
+  * ###### A subnet mask is a construct used by network routers that separates the network and host portions of an IP address, dividing the IP address into subnets. While it allows IP addresses to be divided into subnets, it also determines which IP addresses are within the same network when routing network traffic and providing communication. For example, the subnet mask "255.255.255.255.0" specifies the network portion of the first three octets (24 bits) of the IP address and the host portion of the last octet (8 bits). This allows IP addresses to communicate by identifying which network they are on and makes large networks easier to manage.
+  |Subnet Mask 	  | CIDR |	Binary Notation                    | 	Available Addresses|
+  | -             |  -   |   -                                 |   -                 | 
+  |255.255.255.255| 	/32| 	11111111.11111111.11111111.11111111|                  	1|
+  |255.255.255.254| 	/31| 	11111111.11111111.11111111.11111110| 	                  2|
+  |255.255.255.252| 	/30| 	11111111.11111111.11111111.11111100| 	                  4|
+  |255.255.255.248| 	/29| 	11111111.11111111.11111111.11111000| 	                  8|
+  |255.255.255.240| 	/28| 	11111111.11111111.11111111.11110000| 	                 16|
+  |255.255.255.224| 	/27| 	11111111.11111111.11111111.11100000| 	                 32|
+  |255.255.255.192| 	/26| 	11111111.11111111.11111111.11000000| 	                 64|
+  |255.255.255.128| 	/25|  11111111.11111111.11111111.10000000| 	                128|
+  |255.255.255.0  | 	/24| 	11111111.11111111.11111111.00000000| 	                256|		
+  |255.255.254.0  | 	/23| 	11111111.11111111.11111110.00000000| 	                512|
+  |255.255.252.0  | 	/22| 	11111111.11111111.11111100.00000000| 	               1024|
+  |255.255.248.0  | 	/21| 	11111111.11111111.11111000.00000000| 	               2048|
+  |255.255.240.0  | 	/20| 	11111111.11111111.11110000.00000000| 	               4096|
+  |255.255.224.0  | 	/19| 	11111111.11111111.11100000.00000000| 	               8192|
+  |255.255.192.0  | 	/18| 	11111111.11111111.11000000.00000000| 	              16384|
+  |255.255.128.0  | 	/17| 	11111111.11111111.10000000.00000000| 	              32768|
+  |255.255.0.0    | 	/16| 	11111111.11111111.00000000.00000000| 	              65536|	
+  |255.254.0.0    | 	/15| 	11111111.11111110.00000000.00000000| 	             131072|
+  |255.252.0.0    | 	/14| 	11111111.11111100.00000000.00000000| 	             262144|
+  |255.248.0.0    | 	/13| 	11111111.11111000.00000000.00000000| 	             524288|
+  |255.240.0.0    | 	/12| 	11111111.11110000.00000000.00000000| 	            1048576|
+  |255.224.0.0    | 	/11| 	11111111.11100000.00000000.00000000| 	            2097152|
+  |255.192.0.0    | 	/10| 	11111111.11000000.00000000.00000000| 	            4194304|
+  |255.128.0.0    |  	/9 | 	11111111.10000000.00000000.00000000| 	            8388608|
+  |255.0.0.0      |   /8| 	11111111.00000000.00000000.00000000| 	           16777216| 
+
 
 
 #### What is a switch ? <a name="wiasch"></a>
   * ###### Switches are devices that enable communication between devices on a network and manage data traffic. Each switch comes with multiple ports, and each port is a port to which a device can connect. For example, different devices such as computers, printers, servers and other network devices can be integrated into the network by connecting to one of these ports.
   * ###### When a data packet reaches a switch, the switch first looks at the destination MAC address of the packet and determines the port associated with this MAC address. Then, the switch forwards the packet only to the destination device. During this process, the switch also records the port on the incoming direction, so it knows from which port to receive the packet on the return path. For example, when one computer sends a file to another computer, the switch identifies the MAC address of the sending computer and forwards the packet directly to the receiving computer. Then, when the receiving computer sends a response packet, the switch forwards the incoming packet to the previously determined exit port, allowing the incoming packet to be delivered directly to the sending computer. This process optimizes network traffic, prevents unnecessary transmissions, and accelerates data communication.
+  <h1 align="center">
+  <p>
+      <img height="250" width="700" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/8089135d-2156-404c-ba9a-fee7f5096de0">
+  </h1> <p> </p>
 
 
 #### What is a router ? <a name="wiarer"></a>
+  * ###### Routers are devices that enable data transmission in computer networks. They enable communication between computers, servers and other network devices by routing data communication between different networks.
+  * ###### When a data packet arrives at the router, the router first looks at the destination IP address of the packet and determines the network where the device with that IP address is located. Next, the router performs traffic checks on the network, then determines the most appropriate path to route the packet and ensure that it is forwarded to the correct destination. This process regulates data traffic on the network, optimizes network resources, and ensures secure and efficient data transmission. In addition, routers often provide network security functions and monitor, manage and control data traffic on the network. They prevent unnecessary transmissions and speed up data communication.
+  <h1 align="center">
+  <p>
+      <img height="250" width="700" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/1b200284-425c-4a14-b82d-029b3cf4c8e2">
+  </h1> <p> </p>
 
 
-#### How do switch and router work and what is the difference between them ? <a name="hasarwwitdbt"></a>
+#### What is the difference between a switch and a router? <a name="hasarwwitdbt"></a>
+  <h1 align="center">
+  <p>
+      <img width="160" alt="Switch" src="https://user-images.githubusercontent.com/97880185/211656464-3daa6f82-578b-4c6b-8d54-ff28b93e670f.png">
+      <img width="150" alt="Router" src="https://user-images.githubusercontent.com/97880185/211656451-11235c84-f555-427b-916e-93a428a816b9.png">
+  </h1> <p> </p>
 
+  * ###### Switch :
+    * ###### Manages data transmission between devices on the network. It uses MAC addresses to forward data packets between different devices and deliver them to the destination device.
+    * ###### It usually operates at the second layer of the network (data link layer). It works with MAC addresses and connects devices on the network over physical links.
+    * ###### Data transmission between devices usually takes place within the same network. So a switch enables communication between devices on the same network.
+    * ###### Recognizes and manages devices using MAC (Media Access Control) addresses.
+    * ###### It can directly connect multiple devices and manage traffic density on the network.
+    * ###### It simply routes incoming packets based on the destination MAC address.
+  * ###### Router :
+    * ###### Manages the transmission of data between different networks. It uses IP addresses to forward and route data packets between two or more different networks.
+    * ###### It operates at the third layer of the network (network layer). It works with IP addresses and enables communication between different networks.
+    * ###### Data is transmitted between different networks. So the router enables and routes communication between different networks.
+    * ###### It routes between different networks using IP (Internet Protocol) addresses.
+    * ###### It is often used as a gateway and can connect multiple switches or devices.
+    * ###### It routes incoming packets according to the destination IP address, and this routing process is usually more complex because it communicates between different networks.
+  <h1 align="center">
+  <p>
+      <img height="400" width="500" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/925598ec-420c-403d-b017-e709df7c4453">
+  </h1> <p> </p>
 
 #### What is a diversion table ? <a name="wiadttle"></a>
+  <h1 align="center">
+  <p>
+      <img height="250" width="600" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/332020d9-35db-44a5-8e32-9c1219863545">
+  </h1> <p> </p>
 
+  * ###### A routing table is a data table that lists the paths taken by devices on a network to reach specific destinations. Each entry specifies the address of the destination network and the next hop that packets should use to reach that network.
+    * ###### Destination :
+      * ###### This indicates the address of the network and the CIDR (Class IIDR) of the network the packet wants to reach. For example, the entry "190.3.2.252/30" specifies a route for packets to be routed to the address 190.3.2.252 and the CIDR of the network where this address is located.
+    * ###### Next Hop :
+      * ###### This specifies the next router or gateway address to which packets should be routed to reach a specific destination network. For example, the entry "192.168.1.1" indicates the next router address that will be used to access the network 190.3.2.252/30. 
 
 #### Questions and Solutions : <a name="quesaslti"></a>
 <details>
