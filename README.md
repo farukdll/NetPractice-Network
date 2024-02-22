@@ -228,7 +228,8 @@
       <img height="250" width="600" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/332020d9-35db-44a5-8e32-9c1219863545">
   </h1> <p> </p>
   
-  * ###### A routing table is a data table that lists the paths taken by devices on a network to reach specific destinations. Each entry specifies the address of the destination network and the next hop that packets should use to reach that network.
+  * ###### A routing table is a data table that lists the paths taken by devices on a network to reach specific destinations. Each entry specifies the address of the destination network and the next hop that packets should use to reach that network. For example, 190.3.2.252/30. If you do not want to specify a destination, you can set it to default or 0.0.0.0/0.
+  * ###### "0.0.0.0/0" The CIDR notation is used to refer to an address in the IPv4 address space and means "any IP address". This represents a network in which all IP addresses are contained. The IP address "0.0.0.0" is often used as the default gateway and is where all packets arriving on the network should be routed. "/0" means that the subnet mask has "all bits zero", i.e. no subnet has been created.
     * ###### Destination :
       * ###### This indicates the address of the network and the CIDR (Class IIDR) of the network the packet wants to reach. For example, the entry "190.3.2.252/30" specifies a route for packets to be routed to the address 190.3.2.252 and the CIDR of the network where this address is located.
     * ###### Next Hop :
