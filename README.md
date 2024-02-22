@@ -23,9 +23,8 @@
   * [Binary number system calculation for IP addresses](#bnscfipaddss)
   * [What is the difference between TCP and IP ?](#witdbtcpaip)
   * [What are Network ID and Host ID ?](#wanidahid)
-  * [What are Private and Public IP addresses?](#wapapipaddd)
-  * [What is a Network address ?](#wianipadd)
-  * [What is a Broadcast address ?](#wiabipadd)
+  * [What are Private and Public IP addresses ?](#wapapipaddd)
+  * [What are Network address and Broadcast address ?](#warnaabtadd)
   * [What is a switch ?](#wiasch)
   * [What is a router ?](#wiarer)
   * [How do switch and router work and what is the difference between them ?](#hasarwwitdbt)
@@ -155,14 +154,22 @@
     </h1> <p> </p>
 
 
-
-#### What is a Network address ? <a name="wianipadd"></a>
-
-
-#### What is a Broadcast address ? <a name="wiabipadd"></a>
+#### What are Network address and Broadcast address ? <a name="warnaabtadd"></a>
+  * ###### Network address :
+    * ###### The network address is the first IP address on the network, indicating that all devices on the same network belong to a common network.
+    * ###### For example, "192.168.1.0" can be thought of as the network address. Here, "192.168.1" represents the network number and the next number "0" is the address of the first device on the network.
+  * ###### Broadcast address :
+    * ###### Broadcast address is a special IP address used to send messages or packets to all devices in a network, typically utilized in tasks such as network management, for instance, configuration updates or discovery requests. In IPv4, the broadcast address is usually the last IP address in a subnet; for example, if the IP address range of a subnet is 192.168.1.0/24, the broadcast address would be 192.168.1.255.
+  * ###### For example :
+    * ###### In a network with a subnet mask of 255.255.255.255.240, IP addresses are divided into 4-bit fields. This means that we can get 2^4, or 16 different values. However, since two addresses are reserved for the network address and the broadcast address, only 14 of these 16 addresses can be used.
+    * ###### If a network address is 192.168.1.0 and the subnet mask is 255.255.255.255.240, the available IP addresses on this network are 192.168.1.1 through 192.168.1.14. 192.168.1.0 represents the network address, while 192.168.1.15 represents the broadcast address.
+    * ###### Why can't we use the network address and broadcast address? Because these addresses are usually excluded from assignable IP addresses. Sending data to these addresses can unnecessarily increase network traffic and interfere with the normal communication of devices on the network. Therefore, network and broadcast addresses are usually excluded from assignable IP addresses and are not used for normal communication. Instead, these addresses are used by network routers and other network devices for internal network communication and routing.
+    * ###### In simpler terms, the main reason for excluding network and broadcast addresses from assignable IP addresses is that these addresses are used  to route network traffic and facilitate internal network communication, rather than being directly used for communication between devices. For instance, a network address indicates that devices are connected to the network and is used by network devices like routers to route internal network traffic. The broadcast address, on the other hand, is used to send data to all devices on the network simultaneously but is typically not assigned to devices as a usable IP address. Utilizing these addresses differently from assignable IP addresses helps in organizing communication within the network and efficiently managing network traffic. Therefore, the primary reason these addresses are not used for direct communication is because they are reserved for routing operations by network routers and other network devices.
 
 
 #### What is a switch ? <a name="wiasch"></a>
+  * ###### Switches are devices that enable communication between devices on a network and manage data traffic. Each switch comes with multiple ports, and each port is a port to which a device can connect. For example, different devices such as computers, printers, servers and other network devices can be integrated into the network by connecting to one of these ports.
+  * ###### When a data packet reaches a switch, the switch first looks at the destination MAC address of the packet and determines the port associated with this MAC address. Then, the switch forwards the packet only to the destination device. During this process, the switch also records the port on the incoming direction, so it knows from which port to receive the packet on the return path. For example, when one computer sends a file to another computer, the switch identifies the MAC address of the sending computer and forwards the packet directly to the receiving computer. Then, when the receiving computer sends a response packet, the switch forwards the incoming packet to the previously determined exit port, allowing the incoming packet to be delivered directly to the sending computer. This process optimizes network traffic, prevents unnecessary transmissions, and accelerates data communication.
 
 
 #### What is a router ? <a name="wiarer"></a>
