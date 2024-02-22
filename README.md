@@ -62,7 +62,7 @@
 
 #### What is a IP ? <a name="wiaipadd"></a>
   * ###### IP (Internet Protocol) is a communications protocol used to enable data communication in computer networks. This protocol manages the routing, addressing and forwarding of data packets. IP enables communication between different devices on a network. IP resides at the Internet Layer, the third layer of the TCP/IP protocol stack. The Internet Layer handles the addressing and routing of data packets. IP works closely with TCP (Transmission Control Protocol) at the transport layer. TCP manages the flow of data while IP handles the addressing and routing of data packets. These two protocols work together to ensure reliable and accurate communication between computers.
-  * ###### An IP address is a sequence of numbers separated by dots. IP addresses are expressed as a set of four numbers; an example address would be 192.158.1.38. Each number in the set can range from 0 to 255. So the full IP addressing range is from 0.0.0.0.0 to 255.255.255.255.255.
+  * ###### An IP address is a sequence of numbers separated by dots. IP addresses are expressed as a set of four numbers; an example address would be 192.158.1.38 Each number in the set can range from 0 to 255. So the full IP addressing range is from 0.0.0.0 to 255.255.255.255
   * ###### IP's main tasks at the layer where it resides are the following: Addressing, Routing, Fragmentation, Error Detection, Protocol Management
   * ###### Addressing: IP assigns each device a unique address. This address determines the location of the device on the network and ensures that data packets reach the correct destination. These addresses can usually be in IPv4 or IPv6 format.
   * ###### Routing: IP routes data packets based on their source and destination addresses. This ensures that data packets reach the correct destination and manages communication on the network.
@@ -148,7 +148,7 @@
     * ###### These addresses are used to communicate between devices within private networks.
     * ###### Private IP addresses are not assigned by IANA or other authoritative organizations; instead, they are assigned by a specific network administrator.
     * ###### We cannot use private IP addresses directly on the internet because they are designed for use in closed networks that are not directly accessible to the internet. These addresses are only used for communication between devices within a specific network and are not intended for internet traffic.
-    * ###### Finally, the range 127.0.0.0.0 - 127.255.255.255.255 is reserved for a special IP address "localhost". This IP address represents the self-connection of a device and usually refers to the local loopback interface of the computer. This address is usually used for local testing and development purposes and is not accessible over the internet. Therefore, this address is also one of the private IP addresses.
+    * ###### Finally, the range 127.0.0.0 - 127.255.255.255 is reserved for a special IP address "localhost". This IP address represents the self-connection of a device and usually refers to the local loopback interface of the computer. This address is usually used for local testing and development purposes and is not accessible over the internet. Therefore, this address is also one of the private IP addresses.
     <h1 align="center">
     <p>
         <img height="140" width="500" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/4435cb8d-8ab8-4bd7-824e-6e6fb8164a27">
@@ -162,14 +162,14 @@
   * ###### Broadcast address :
     * ###### Broadcast address is a special IP address used to send messages or packets to all devices in a network, typically utilized in tasks such as network management, for instance, configuration updates or discovery requests. In IPv4, the broadcast address is usually the last IP address in a subnet; for example, if the IP address range of a subnet is 192.168.1.0/24, the broadcast address would be 192.168.1.255.
   * ###### For example :
-    * ###### In a network with a subnet mask of 255.255.255.255.240, IP addresses are divided into 4-bit fields. This means that we can get 2^4, or 16 different values. However, since two addresses are reserved for the network address and the broadcast address, only 14 of these 16 addresses can be used.
-    * ###### If a network address is 192.168.1.0 and the subnet mask is 255.255.255.255.240, the available IP addresses on this network are 192.168.1.1 through 192.168.1.14. 192.168.1.0 represents the network address, while 192.168.1.15 represents the broadcast address.
+    * ###### In a network with a subnet mask of 255.255.255.240, IP addresses are divided into 4-bit fields. This means that we can get 2^4, or 16 different values. However, since two addresses are reserved for the network address and the broadcast address, only 14 of these 16 addresses can be used.
+    * ###### If a network address is 192.168.1.0 and the subnet mask is 255.255.255.240, the available IP addresses on this network are 192.168.1.1 through 192.168.1.14. 192.168.1.0 represents the network address, while 192.168.1.15 represents the broadcast address.
   * ###### Why can't we use the network address and broadcast address? Because these addresses are usually excluded from assignable IP addresses. Sending data to these addresses can unnecessarily increase network traffic and interfere with the normal communication of devices on the network. Therefore, network and broadcast addresses are usually excluded from assignable IP addresses and are not used for normal communication. Instead, these addresses are used by network routers and other network devices for internal network communication and routing.
   * ###### In simpler terms, the main reason for excluding network and broadcast addresses from assignable IP addresses is that these addresses are used  to route network traffic and facilitate internal network communication, rather than being directly used for communication between devices. For instance, a network address indicates that devices are connected to the network and is used by network devices like routers to route internal network traffic. The broadcast address, on the other hand, is used to send data to all devices on the network simultaneously but is typically not assigned to devices as a usable IP address. Utilizing these addresses differently from assignable IP addresses helps in organizing communication within the network and efficiently managing network traffic. Therefore, the primary reason these addresses are not used for direct communication is because they are reserved for routing operations by network routers and other network devices.
 
 
 #### What is subnet mask ? <a name="wisubmaskkk"></a>
-  * ###### A subnet mask is a construct used by network routers that separates the network and host portions of an IP address, dividing the IP address into subnets. While it allows IP addresses to be divided into subnets, it also determines which IP addresses are within the same network when routing network traffic and providing communication. For example, the subnet mask "255.255.255.255.0" specifies the network portion of the first three octets (24 bits) of the IP address and the host portion of the last octet (8 bits). This allows IP addresses to communicate by identifying which network they are on and makes large networks easier to manage.
+  * ###### Subnet mask is a structure used by network routers. This structure divides IP addresses into subnets and distinguishes between network and host sections while determining IP addresses within the same network for communication. For example, the "255.255.255.0" subnet mask specifies the network portion of the first three octets (24 bits) of the IP address and the host portion of the last octet (8 bits). This allows communication by identifying which network IP addresses belong to and facilitates the management of large networks.
   <h1 align="center">
   <p>
       <img height="400" width="600" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/d9278719-16d4-4b88-835a-5b827b557b56">
@@ -221,12 +221,13 @@
       <img height="400" width="600" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/925598ec-420c-403d-b017-e709df7c4453">
   </h1> <p> </p>
 
+
 #### What is a diversion table ? <a name="wiadttle"></a>
   <h1 align="center">
   <p>
       <img height="250" width="600" src="https://github.com/farukdll/NetPractice-Network/assets/97880185/332020d9-35db-44a5-8e32-9c1219863545">
   </h1> <p> </p>
-
+  
   * ###### A routing table is a data table that lists the paths taken by devices on a network to reach specific destinations. Each entry specifies the address of the destination network and the next hop that packets should use to reach that network.
     * ###### Destination :
       * ###### This indicates the address of the network and the CIDR (Class IIDR) of the network the packet wants to reach. For example, the entry "190.3.2.252/30" specifies a route for packets to be routed to the address 190.3.2.252 and the CIDR of the network where this address is located.
